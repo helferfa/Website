@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>HUB</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="../Design/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Fonts -->
+  <link href="../Design/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="../Design/css/animate.css" rel="stylesheet" />
+  <!-- Squad theme CSS -->
+  <link href="../Design/css/style.css" rel="stylesheet">
+  <link href="../Design/color/default.css" rel="stylesheet">
+
+
+  <style>
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+</style>
+
+</head>
+
+<body>
+
+  <section id="service" class="home-section text-center bg-image" style="color: #333">
+
+    <div class="heading-about" style="color: #666">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="wow bounceInDown" data-wow-delay="0.4s">
+              <div class="section-heading">
+                <h2>Google Maps</h2>
+                <i class="fa fa-2x fa-angle-down"></i>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-lg-offset-5">
+          <hr class="marginbot-50">
+        </div>
+      </div>
+      <div class="row">
+        <div class="wow fadeInUp" data-wow-delay="0.2s">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    function initMap() {
+      var uluru = {lat: 50.775, lng: 6.085};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 13,
+        center: uluru
+      });
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    }
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNBQh-MWWCq9GH2S5vwTNJB3yqDuhdGCE&callback=initMap">
+</script>
+<script 
+  src="core.js">
+</script>
+</body>
+
+</html>
