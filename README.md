@@ -1,7 +1,7 @@
 # Website
 git:
 Push new Changes: git add --all
-                  git commit -m "Message"
+         Test Änderung         git commit -m "Message"
                   git push -u 
 <<<<<<< HEAD
 idk
